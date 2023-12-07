@@ -3,10 +3,11 @@ package config
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 	"math/big"
 	"os"
 	"time"
+
+	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 
 	"github.com/jessevdk/go-flags"
 	"github.com/kaspanet/kaspad/domain/dagconfig"
@@ -16,6 +17,7 @@ import (
 
 // NetworkFlags holds the network configuration, that is which network is selected.
 type NetworkFlags struct {
+	Customnet             bool   `long:"customnet" description:"Use the customnet network"`
 	Testnet               bool   `long:"testnet" description:"Use the test network"`
 	Simnet                bool   `long:"simnet" description:"Use the simulation test network"`
 	Devnet                bool   `long:"devnet" description:"Use the development test network"`
@@ -61,6 +63,10 @@ func (networkFlags *NetworkFlags) ResolveNetwork(parser *flags.Parser) error {
 	// default net is main net
 	// Count number of network flags passed; assign active network params
 	// while we're at it
+	if networkFlags.Customnet {
+		numNets++
+		networkFlags.ActiveNetParams = &dagconfig.CustomNetParams
+	}
 	if networkFlags.Testnet {
 		numNets++
 		networkFlags.ActiveNetParams = &dagconfig.TestnetParams

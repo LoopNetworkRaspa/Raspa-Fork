@@ -5,14 +5,24 @@
 package dagconfig
 
 import (
+	"math/big"
+
 	"github.com/kaspanet/go-muhash"
 	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 	"github.com/kaspanet/kaspad/domain/consensus/utils/blockheader"
 	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
 	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
-	"math/big"
 )
 
+// custom config
+// ---------------------------------------
+var _genesisTxOuts = []*externalapi.DomainTransactionOutput{ // <- is not currently in use
+    {
+        Value:           50000000000, // Reward amount
+        ScriptPublicKey:  externalapi.NewScriptPublicKeyFromString("qzsw4u86emlxttfvtrauusrm3k0fjzl9gq2m7jpqqpprz8u8dsj5yz4sayfl9"),
+    },
+}
+// ---------------------------------------
 var genesisTxOuts = []*externalapi.DomainTransactionOutput{}
 
 var genesisTxPayload = []byte{

@@ -108,6 +108,9 @@ const (
 
 	// Devnet represents the development test network.
 	Devnet KaspaNet = 0x732d87e1
+
+	// custom config
+	Customnet KaspaNet = 0x123456
 )
 
 // bnStrings is a map of kaspa networks back to their constant names for
@@ -117,6 +120,7 @@ var bnStrings = map[KaspaNet]string{
 	Testnet: "Testnet",
 	Simnet:  "Simnet",
 	Devnet:  "Devnet",
+	Customnet: "Customnet",
 }
 
 // String returns the KaspaNet in human-readable form.

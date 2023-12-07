@@ -206,6 +206,74 @@ func (p *Params) PruningDepth() uint64 {
 	return 2*p.FinalityDepth() + 4*p.MergeSetSizeLimit*uint64(p.K) + 2*uint64(p.K) + 2
 }
 
+// custom config
+// ---------------------------------------
+var CustomNetParams = Params{
+    K:           defaultGHOSTDAGK, // You may want to use the same value or modify it
+    Name:        "customnet",
+    Net:         appmessage.Customnet // customnet -> 0x123456
+    RPCPort:     "16510",
+    DefaultPort: "16511",
+    DNSSeeds:    []string{}, // Add your custom DNS seeds if available
+
+    // Customize the DAG and consensus parameters as needed
+	GenesisBlock:                    &genesisBlock,
+	GenesisHash:                     genesisHash,
+	PowMax:                          mainPowMax,
+    // ... other parameters as per your custom network requirements ...
+	BlockCoinbaseMaturity:           100,
+	SubsidyGenesisReward:            defaultSubsidyGenesisReward,
+	PreDeflationaryPhaseBaseSubsidy: defaultPreDeflationaryPhaseBaseSubsidy,
+	DeflationaryPhaseBaseSubsidy:    defaultDeflationaryPhaseBaseSubsidy,
+	TargetTimePerBlock:              defaultTargetTimePerBlock,
+	FinalityDuration:                defaultFinalityDuration,
+	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
+	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
+
+	// Consensus rule change deployments.
+	//
+	// The miner confirmation window is defined as:
+	//   target proof of work timespan / target proof of work spacing
+	RuleChangeActivationThreshold: 1916, // 95% of MinerConfirmationWindow
+	MinerConfirmationWindow:       2016, //
+    // Mempool parameters
+    RelayNonStdTxs: true, // or false, as per your requirement
+
+    // Other parameters
+    AcceptUnroutable: false,
+
+    // Human-readable part for Bech32 encoded addresses
+    Prefix: util.Bech32PrefixKaspa,
+
+    // Address encoding magics
+    PrivateKeyID: 0x80, // Adjust if needed
+
+    // Additional parameters
+    EnableNonNativeSubnetworks: false,
+    DisableDifficultyAdjustment: false,
+    // ... and so on, as per your custom settings ...
+
+    // Set your custom network-specific parameters
+	MaxCoinbasePayloadLength:                defaultMaxCoinbasePayloadLength,
+	MaxBlockMass:                            defaultMaxBlockMass,
+	MaxBlockParents:                         defaultMaxBlockParents,
+	MassPerTxByte:                           defaultMassPerTxByte,
+	MassPerScriptPubKeyByte:                 defaultMassPerScriptPubKeyByte,
+	MassPerSigOp:                            defaultMassPerSigOp,
+	MergeSetSizeLimit:                       defaultMergeSetSizeLimit,
+	CoinbasePayloadScriptPublicKeyMaxLength: defaultCoinbasePayloadScriptPublicKeyMaxLength,
+	PruningProofM:                           defaultPruningProofM,
+	DeflationaryPhaseDaaScore:               defaultDeflationaryPhaseDaaScore,
+	DisallowDirectBlocksOnTopOfGenesis:      true,
+
+	// This is technically 255, but we clamped it at 256 - block level of mainnet genesis
+	// This means that any block that has a level lower or equal to genesis will be level 0.
+	MaxBlockLevel: 225,
+	MergeDepth:    defaultMergeDepth,
+}
+// ---------------------------------------
+
+
 // MainnetParams defines the network parameters for the main Kaspa network.
 var MainnetParams = Params{
 	K:           defaultGHOSTDAGK,
