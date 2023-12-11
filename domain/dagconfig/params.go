@@ -211,7 +211,7 @@ func (p *Params) PruningDepth() uint64 {
 var CustomNetParams = Params{
     K:           defaultGHOSTDAGK, // You may want to use the same value or modify it
     Name:        "customnet",
-    Net:         appmessage.Customnet // customnet -> 0x123456
+    Net:         appmessage.Customnet, // customnet -> 0x123456
     RPCPort:     "16510",
     DefaultPort: "16511",
     DNSSeeds:    []string{}, // Add your custom DNS seeds if available
