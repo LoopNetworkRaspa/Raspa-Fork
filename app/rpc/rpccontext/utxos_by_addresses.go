@@ -2,12 +2,12 @@ package rpccontext
 
 import (
 	"encoding/hex"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/txscript"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util"
 	"github.com/pkg/errors"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/domain/utxoindex"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/utxoindex"
 )
 
 // ConvertUTXOOutpointEntryPairsToUTXOsByAddressesEntries converts

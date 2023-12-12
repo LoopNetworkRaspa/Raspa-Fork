@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/kaspanet/kaspad/util/txmass"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/txmass"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/util/difficulty"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/difficulty"
 )
 
 // blockValidator exposes a set of validation classes, after which

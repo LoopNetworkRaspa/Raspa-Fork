@@ -1,9 +1,9 @@
 package protowire
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/id"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter/id"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/mstime"
 	"github.com/pkg/errors"
 )
 

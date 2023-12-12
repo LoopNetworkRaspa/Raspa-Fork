@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/logger"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/rpcclient"
 	"github.com/pkg/errors"
 	"time"
 )

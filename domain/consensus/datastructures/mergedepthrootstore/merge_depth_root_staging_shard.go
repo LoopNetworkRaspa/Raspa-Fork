@@ -1,8 +1,8 @@
 package mergedepthrootstore
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
 )
 
 type mergeDepthRootStagingShard struct {

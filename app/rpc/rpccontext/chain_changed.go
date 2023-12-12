@@ -1,9 +1,9 @@
 package rpccontext
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/consensushashing"
 )
 
 // ConvertVirtualSelectedParentChainChangesToChainChangedNotificationMessage converts

@@ -6,12 +6,12 @@ package txscript
 
 import (
 	"bytes"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
 	"reflect"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/dagconfig"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util"
 )
 
 // mustParseShortForm parses the passed short form script and returns the

@@ -3,8 +3,8 @@ package pow
 import (
 	"bytes"
 	"encoding/hex"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/hashes"
 	"math/rand"
 	"testing"
 )

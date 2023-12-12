@@ -1,8 +1,8 @@
 package rpcclient
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/logger"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/panics"
 )
 
 var log = logger.RegisterSubSystem("RPCC")

@@ -3,12 +3,12 @@ package consensushashing
 import (
 	"io"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/serialization"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/serialization"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
-	"github.com/kaspanet/kaspad/util/binaryserializer"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/hashes"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/transactionhelper"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/binaryserializer"
 	"github.com/pkg/errors"
 )
 

@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 	"github.com/kaspanet/go-secp256k1"
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/mining"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/mining"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util"
 	"math/rand"
 	"os"
 	"os/exec"
@@ -15,10 +15,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/stability-tests/common/rpc"
-	"github.com/kaspanet/kaspad/util/panics"
-	"github.com/kaspanet/kaspad/util/profiling"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/stability-tests/common"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/stability-tests/common/rpc"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/panics"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/profiling"
 	"github.com/pkg/errors"
 )
 

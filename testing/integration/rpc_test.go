@@ -1,12 +1,12 @@
 package integration
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/config"
 	"runtime"
 	"testing"
 	"time"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/rpcclient"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/rpcclient"
 )
 
 const rpcTimeout = 10 * time.Second

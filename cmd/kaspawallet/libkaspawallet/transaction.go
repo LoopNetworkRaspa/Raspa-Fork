@@ -1,13 +1,13 @@
 package libkaspawallet
 
 import (
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/bip32"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/serialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/cmd/kaspawallet/libkaspawallet/bip32"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/cmd/kaspawallet/libkaspawallet/serialization"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/constants"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/subnetworks"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/txscript"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util"
 	"github.com/pkg/errors"
 )
 

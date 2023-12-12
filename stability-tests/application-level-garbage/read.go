@@ -3,8 +3,8 @@ package main
 import (
 	"encoding/json"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/stability-tests/common"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/stability-tests/common"
 	"github.com/pkg/errors"
 )
 

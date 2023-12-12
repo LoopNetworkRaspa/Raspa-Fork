@@ -3,7 +3,7 @@ package flowcontext
 import (
 	"sync"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
 )
 
 // SharedRequestedBlocks is a data structure that is shared between peers that

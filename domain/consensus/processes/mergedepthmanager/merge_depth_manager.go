@@ -1,10 +1,10 @@
 package mergedepthmanager
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/ruleerrors"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/db/database"
 	"github.com/pkg/errors"
 )
 

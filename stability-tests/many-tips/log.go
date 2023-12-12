@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/logger"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/stability-tests/common"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/panics"
 	"os"
 )
 

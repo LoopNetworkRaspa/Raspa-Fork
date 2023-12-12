@@ -2,7 +2,7 @@ package common
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/dagconfig"
 	"os"
 	"sync/atomic"
 	"syscall"

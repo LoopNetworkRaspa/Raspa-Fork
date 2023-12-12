@@ -3,9 +3,9 @@ package serialization
 import (
 	"math"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet/serialization/protoserialization"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/cmd/kaspawallet/libkaspawallet/serialization/protoserialization"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/subnetworks"
 	"github.com/pkg/errors"
 	"google.golang.org/protobuf/proto"
 )

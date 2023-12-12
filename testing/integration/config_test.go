@@ -5,8 +5,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/config"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/dagconfig"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/config"
 )
 
 const (

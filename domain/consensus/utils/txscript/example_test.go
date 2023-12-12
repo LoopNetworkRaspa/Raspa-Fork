@@ -7,11 +7,11 @@ package txscript_test
 import (
 	"encoding/hex"
 	"fmt"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/txscript"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/dagconfig"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util"
 )
 
 // This example demonstrates creating a script which pays to a kaspa address.

@@ -7,7 +7,7 @@ package appmessage
 import (
 	"net"
 
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/mstime"
 )
 
 // NetAddress defines information about a peer on the network including the time

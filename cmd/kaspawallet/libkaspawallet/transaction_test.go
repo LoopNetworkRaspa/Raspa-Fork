@@ -2,18 +2,18 @@ package libkaspawallet_test
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/constants"
 	"strings"
 	"testing"
 
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/libkaspawallet"
-	"github.com/kaspanet/kaspad/domain/consensus"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/consensushashing"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/testutils"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/txscript"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
-	"github.com/kaspanet/kaspad/util"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/cmd/kaspawallet/libkaspawallet"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/consensushashing"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/testutils"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/txscript"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/utxo"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util"
 )
 
 func forSchnorrAndECDSA(t *testing.T, testFunc func(t *testing.T, ecdsa bool)) {

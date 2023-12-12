@@ -1,12 +1,12 @@
 package blockvalidator
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/model"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionhelper"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/virtual"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/ruleerrors"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/transactionhelper"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/virtual"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

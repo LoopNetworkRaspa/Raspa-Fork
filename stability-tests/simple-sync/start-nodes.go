@@ -7,8 +7,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/kaspanet/kaspad/stability-tests/common"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/stability-tests/common"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/panics"
 	"github.com/pkg/errors"
 )
 

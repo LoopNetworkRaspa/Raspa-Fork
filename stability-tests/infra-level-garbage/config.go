@@ -4,9 +4,9 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/stability-tests/common"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/config"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/logger"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/stability-tests/common"
 
 	"github.com/jessevdk/go-flags"
 )

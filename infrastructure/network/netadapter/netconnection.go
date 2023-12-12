@@ -2,13 +2,13 @@ package netadapter
 
 import (
 	"fmt"
-	"github.com/kaspanet/kaspad/app/appmessage"
-	routerpkg "github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	routerpkg "github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/id"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/server"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter/id"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter/server"
 )
 
 // NetConnection is a wrapper to a server connection for use by services external to NetAdapter

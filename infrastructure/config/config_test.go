@@ -7,9 +7,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/subnetworks"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
 )
 
 func TestCreateDefaultConfigFile(t *testing.T) {

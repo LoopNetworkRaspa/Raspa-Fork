@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
 )
 
 func Test16IncomingConnections(t *testing.T) {

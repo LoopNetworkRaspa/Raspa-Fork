@@ -1,8 +1,8 @@
 package mine
 
 import (
-	"github.com/kaspanet/kaspad/infrastructure/logger"
-	"github.com/kaspanet/kaspad/util/panics"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/logger"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/panics"
 )
 
 // log is a logger that is initialized with no output filters. This

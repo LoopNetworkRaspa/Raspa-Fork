@@ -12,7 +12,7 @@ import (
 	"testing"
 	"unicode"
 
-	"github.com/kaspanet/kaspad/util"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util"
 )
 
 // TestAppDataDir tests the API for AppDir to ensure it gives expected

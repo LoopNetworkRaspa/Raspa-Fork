@@ -1,12 +1,12 @@
 package addressexchange
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/common"
+	peerpkg "github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/peer"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/protocolerrors"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/addressmanager"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter/router"
 )
 
 // ReceiveAddressesContext is the interface for the context needed for the ReceiveAddresses flow.

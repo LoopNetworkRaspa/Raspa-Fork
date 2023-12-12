@@ -1,7 +1,7 @@
 package math_test
 
 import (
-	utilMath "github.com/kaspanet/kaspad/util/math"
+	utilMath "github.com/LoopNetworkRaspa/Raspa-Fork/util/math"
 	"math"
 	"testing"
 )

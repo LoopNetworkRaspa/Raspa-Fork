@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
 	"testing"
 )
 

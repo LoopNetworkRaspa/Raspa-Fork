@@ -1,4 +1,4 @@
-module github.com/kaspanet/kaspad
+module github.com/LoopNetworkRaspa/Raspa-Fork
 
 go 1.18
 

@@ -5,8 +5,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/infrastructure/logger"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/dagconfig"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/logger"
 	"github.com/pkg/errors"
 )
 

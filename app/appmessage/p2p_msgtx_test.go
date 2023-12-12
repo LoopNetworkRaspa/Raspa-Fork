@@ -11,13 +11,13 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/constants"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionid"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/subnetworks"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/transactionid"
 
 	"github.com/davecgh/go-spew/spew"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
 )
 
 // TestTx tests the MsgTx API.

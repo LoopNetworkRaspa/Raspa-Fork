@@ -1,8 +1,8 @@
 package common
 
 import (
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	routerpkg "github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	peerpkg "github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/peer"
+	routerpkg "github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter/router"
 	"time"
 
 	"github.com/pkg/errors"

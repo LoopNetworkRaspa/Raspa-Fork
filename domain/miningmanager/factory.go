@@ -1,10 +1,10 @@
 package miningmanager
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensusreference"
-	"github.com/kaspanet/kaspad/domain/dagconfig"
-	"github.com/kaspanet/kaspad/domain/miningmanager/blocktemplatebuilder"
-	mempoolpkg "github.com/kaspanet/kaspad/domain/miningmanager/mempool"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensusreference"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/dagconfig"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/miningmanager/blocktemplatebuilder"
+	mempoolpkg "github.com/LoopNetworkRaspa/Raspa-Fork/domain/miningmanager/mempool"
 	"sync"
 	"time"
 )

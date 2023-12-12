@@ -9,7 +9,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/kaspanet/kaspad/infrastructure/db/database"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/db/database"
 )
 
 func TestDatabasePut(t *testing.T) {

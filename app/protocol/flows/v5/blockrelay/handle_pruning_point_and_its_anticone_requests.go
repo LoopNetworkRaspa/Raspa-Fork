@@ -1,13 +1,13 @@
 package blockrelay
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/domain"
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	peerpkg "github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/peer"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/protocolerrors"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/config"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter/router"
 	"sync/atomic"
 )
 

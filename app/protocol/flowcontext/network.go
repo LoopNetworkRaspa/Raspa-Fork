@@ -1,11 +1,11 @@
 package flowcontext
 
 import (
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/common"
+	peerpkg "github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/peer"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/connmanager"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter"
 	"github.com/pkg/errors"
 )
 

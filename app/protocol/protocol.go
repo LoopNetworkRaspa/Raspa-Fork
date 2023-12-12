@@ -1,20 +1,20 @@
 package protocol
 
 import (
-	"github.com/kaspanet/kaspad/app/protocol/common"
-	"github.com/kaspanet/kaspad/app/protocol/flows/ready"
-	"github.com/kaspanet/kaspad/app/protocol/flows/v5"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/common"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/flows/ready"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/flows/v5"
 	"sync"
 	"sync/atomic"
 
-	"github.com/kaspanet/kaspad/app/appmessage"
-	"github.com/kaspanet/kaspad/app/protocol/flows/handshake"
-	peerpkg "github.com/kaspanet/kaspad/app/protocol/peer"
-	"github.com/kaspanet/kaspad/app/protocol/protocolerrors"
-	"github.com/kaspanet/kaspad/infrastructure/network/addressmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/connmanager"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter"
-	routerpkg "github.com/kaspanet/kaspad/infrastructure/network/netadapter/router"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/appmessage"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/flows/handshake"
+	peerpkg "github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/peer"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/app/protocol/protocolerrors"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/addressmanager"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/connmanager"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter"
+	routerpkg "github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter/router"
 	"github.com/pkg/errors"
 )
 

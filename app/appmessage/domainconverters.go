@@ -5,14 +5,14 @@ import (
 	"github.com/pkg/errors"
 	"math/big"
 
-	"github.com/kaspanet/kaspad/domain/consensus/utils/blockheader"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/hashes"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/utxo"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/blockheader"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/hashes"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/utxo"
 
-	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/subnetworks"
-	"github.com/kaspanet/kaspad/domain/consensus/utils/transactionid"
-	"github.com/kaspanet/kaspad/util/mstime"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/model/externalapi"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/subnetworks"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/transactionid"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/util/mstime"
 )
 
 // DomainBlockToMsgBlock converts an externalapi.DomainBlock to MsgBlock

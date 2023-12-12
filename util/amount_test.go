@@ -5,11 +5,11 @@
 package util_test
 
 import (
-	"github.com/kaspanet/kaspad/domain/consensus/utils/constants"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/domain/consensus/utils/constants"
 	"math"
 	"testing"
 
-	. "github.com/kaspanet/kaspad/util"
+	. "github.com/LoopNetworkRaspa/Raspa-Fork/util"
 )
 
 func TestAmountCreation(t *testing.T) {

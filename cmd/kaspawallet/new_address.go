@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/client"
-	"github.com/kaspanet/kaspad/cmd/kaspawallet/daemon/pb"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/cmd/kaspawallet/daemon/client"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/cmd/kaspawallet/daemon/pb"
 )
 
 func newAddress(conf *newAddressConfig) error {

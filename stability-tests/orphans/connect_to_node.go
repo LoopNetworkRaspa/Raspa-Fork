@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/kaspanet/kaspad/infrastructure/config"
-	"github.com/kaspanet/kaspad/infrastructure/network/netadapter/standalone"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/config"
+	"github.com/LoopNetworkRaspa/Raspa-Fork/infrastructure/network/netadapter/standalone"
 )
 
 func connectToNode() *standalone.Routes {
