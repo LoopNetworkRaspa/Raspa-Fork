@@ -17,10 +17,10 @@ import (
 
 // NetworkFlags holds the network configuration, that is which network is selected.
 type NetworkFlags struct {
-	Customnet             bool   `long:"customnet" description:"Use the customnet network"`
 	Testnet               bool   `long:"testnet" description:"Use the test network"`
 	Simnet                bool   `long:"simnet" description:"Use the simulation test network"`
 	Devnet                bool   `long:"devnet" description:"Use the development test network"`
+	Customnet             bool   `long:"customnet" description:"Use the customnet network"`
 	OverrideDAGParamsFile string `long:"override-dag-params-file" description:"Overrides DAG params (allowed only on devnet)"`
 
 	ActiveNetParams *dagconfig.Params
@@ -58,14 +58,18 @@ type overrideDAGParamsConfig struct {
 func (networkFlags *NetworkFlags) ResolveNetwork(parser *flags.Parser) error {
 	//NetParams holds the selected network parameters. Default value is main-net.
 	networkFlags.ActiveNetParams = &dagconfig.MainnetParams
+	fmt.Println("\n-- MainnetParams \n", &dagconfig.MainnetParams)
+	fmt.Println("\n-- networkFlags \n", networkFlags)
+
 	// Multiple networks can't be selected simultaneously.
 	numNets := 0
 	// default net is main net
 	// Count number of network flags passed; assign active network params
 	// while we're at it
 	if networkFlags.Customnet {
+		println("---- networkFlags.Customnet")
 		numNets++
-		networkFlags.ActiveNetParams = &dagconfig.CustomNetParams
+		networkFlags.ActiveNetParams = &dagconfig.CustomnetParams
 	}
 	if networkFlags.Testnet {
 		numNets++
@@ -76,6 +80,7 @@ func (networkFlags *NetworkFlags) ResolveNetwork(parser *flags.Parser) error {
 		networkFlags.ActiveNetParams = &dagconfig.SimnetParams
 	}
 	if networkFlags.Devnet {
+		println("--- networkFlags.Devnet")
 		numNets++
 		networkFlags.ActiveNetParams = &dagconfig.DevnetParams
 	}
@@ -98,6 +103,7 @@ func (networkFlags *NetworkFlags) ResolveNetwork(parser *flags.Parser) error {
 
 // NetParams returns the ActiveNetParams
 func (networkFlags *NetworkFlags) NetParams() *dagconfig.Params {
+	println("#networkFlags ", networkFlags.ActiveNetParams.Name)
 	return networkFlags.ActiveNetParams
 }
 
