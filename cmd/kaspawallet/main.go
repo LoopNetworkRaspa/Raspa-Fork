@@ -1,10 +1,14 @@
 package main
 
-import "github.com/pkg/errors"
+import (
+	"fmt"
+
+	"github.com/pkg/errors"
+)
 
 func main() {
 	subCmd, config := parseCommandLine()
-
+	fmt.Println("\n[DEBAG] config ", config)
 	var err error
 	switch subCmd {
 	case createSubCmd:

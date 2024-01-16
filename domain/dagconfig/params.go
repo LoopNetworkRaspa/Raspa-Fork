@@ -224,10 +224,12 @@ var CustomnetParams = Params{
 	SubsidyGenesisReward:            defaultSubsidyGenesisReward,
 	PreDeflationaryPhaseBaseSubsidy: defaultPreDeflationaryPhaseBaseSubsidy,
 	DeflationaryPhaseBaseSubsidy:    defaultDeflationaryPhaseBaseSubsidy,
-	TargetTimePerBlock:              defaultTargetTimePerBlock,
-	FinalityDuration:                defaultFinalityDuration,
-	DifficultyAdjustmentWindowSize:  defaultDifficultyAdjustmentWindowSize,
-	TimestampDeviationTolerance:     defaultTimestampDeviationTolerance,
+	// TargetTimePerBlock:              defaultTargetTimePerBlock,
+	// FinalityDuration:                defaultFinalityDuration,
+	TargetTimePerBlock:             time.Millisecond,
+	FinalityDuration:               time.Minute,
+	DifficultyAdjustmentWindowSize: defaultDifficultyAdjustmentWindowSize,
+	TimestampDeviationTolerance:    defaultTimestampDeviationTolerance,
 
 	// Consensus rule change deployments.
 	//
@@ -264,11 +266,11 @@ var CustomnetParams = Params{
 	CoinbasePayloadScriptPublicKeyMaxLength: defaultCoinbasePayloadScriptPublicKeyMaxLength,
 	PruningProofM:                           defaultPruningProofM,
 	DeflationaryPhaseDaaScore:               defaultDeflationaryPhaseDaaScore,
-	DisallowDirectBlocksOnTopOfGenesis:      false,
+	// DisallowDirectBlocksOnTopOfGenesis:      false,
 
 	// This is technically 255, but we clamped it at 256 - block level of mainnet genesis
 	// This means that any block that has a level lower or equal to genesis will be level 0.
-	MaxBlockLevel: 225,
+	MaxBlockLevel: 250,
 	MergeDepth:    defaultMergeDepth,
 }
 
@@ -473,7 +475,7 @@ var SimnetParams = Params{
 	// EnableNonNativeSubnetworks enables non-native/coinbase transactions
 	EnableNonNativeSubnetworks: false,
 
-	DisableDifficultyAdjustment: true,
+	DisableDifficultyAdjustment: true, //TODO: must be `true`
 
 	MaxCoinbasePayloadLength:                defaultMaxCoinbasePayloadLength,
 	MaxBlockMass:                            defaultMaxBlockMass,

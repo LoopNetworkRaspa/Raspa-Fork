@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/kaspanet/kaspad/infrastructure/config"
@@ -131,11 +132,14 @@ type dumpUnencryptedDataConfig struct {
 
 func parseCommandLine() (subCommand string, config interface{}) {
 	cfg := &configFlags{}
+	fmt.Println("\n[DEBAG] cfg ", cfg)
 	parser := flags.NewParser(cfg, flags.PrintErrors|flags.HelpFlag)
+	fmt.Println("\n[DEBAG] parser ", parser)
 
 	createConf := &createConfig{}
 	parser.AddCommand(createSubCmd, "Creates a new wallet",
 		"Creates a private key and 3 public addresses, one for each of MainNet, TestNet and DevNet", createConf)
+	fmt.Println("\n[DEBAG] BEFORE createConf\n", createConf)
 
 	balanceConf := &balanceConfig{DaemonAddress: defaultListen}
 	parser.AddCommand(balanceSubCmd, "Shows the balance of a public address",
@@ -196,14 +200,24 @@ func parseCommandLine() (subCommand string, config interface{}) {
 		}
 		return "", nil
 	}
+	fmt.Println("\n[DEBAG] AFTER createConf\n", createConf)
 
 	switch parser.Command.Active.Name {
 	case createSubCmd:
-		combineNetworkFlags(&createConf.NetworkFlags, &cfg.NetworkFlags)
+		// fmt.Println("--parser ", parser)
+		fmt.Println("\n[DEBAG] BEFORE createSubCmd createConf\n", createConf)
+		fmt.Println("\n[DEBAG] parser ", parser)
+		fmt.Println("\n[DEBAG] BF createConf.Simnet\n", createConf.Simnet)
+		combineNetworkFlags(&createConf.NetworkFlags, &cfg.NetworkFlags) //TODO місце зміни значення прапорця мережі
+		fmt.Println("\n[DEBAG] AF createConf.Simnet\n", createConf.Simnet)
+
 		err := createConf.ResolveNetwork(parser)
 		if err != nil {
 			printErrorAndExit(err)
 		}
+
+		fmt.Println("\n[DEBAG] AFTER createSubCmd createConf\n", createConf)
+
 		config = createConf
 	case balanceSubCmd:
 		combineNetworkFlags(&balanceConf.NetworkFlags, &cfg.NetworkFlags)
@@ -291,6 +305,7 @@ func parseCommandLine() (subCommand string, config interface{}) {
 		}
 		config = startDaemonConf
 	}
+	fmt.Println("\n[DEBAG] END createConf\n", createConf)
 
 	return parser.Command.Active.Name, config
 }
@@ -317,6 +332,7 @@ func combineNetworkFlags(dst, src *config.NetworkFlags) {
 	dst.Testnet = dst.Testnet || src.Testnet
 	dst.Simnet = dst.Simnet || src.Simnet
 	dst.Devnet = dst.Devnet || src.Devnet
+	dst.Customnet = dst.Customnet || src.Customnet // TODO: added custom network
 	if dst.OverrideDAGParamsFile == "" {
 		dst.OverrideDAGParamsFile = src.OverrideDAGParamsFile
 	}

@@ -17,11 +17,12 @@ import (
 // custom config
 // ---------------------------------------
 var _genesisTxOuts = []*externalapi.DomainTransactionOutput{ // <- is not currently in use
-    {
-        Value:           50000000000, // Reward amount
-        ScriptPublicKey:  externalapi.NewScriptPublicKeyFromString("qzsw4u86emlxttfvtrauusrm3k0fjzl9gq2m7jpqqpprz8u8dsj5yz4sayfl9"),
-    },
+	{
+		Value:           50000000000, // Reward amount
+		ScriptPublicKey: externalapi.NewScriptPublicKeyFromString("qzsw4u86emlxttfvtrauusrm3k0fjzl9gq2m7jpqqpprz8u8dsj5yz4sayfl9"),
+	},
 }
+
 // ---------------------------------------
 var genesisTxOuts = []*externalapi.DomainTransactionOutput{}
 
@@ -63,10 +64,18 @@ var genesisCoinbaseTx = transactionhelper.NewSubnetworkTransaction(0, []*externa
 
 // genesisHash is the hash of the first block in the block DAG for the main
 // network (genesis block).
-var genesisHash = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
-	0x58, 0xc2, 0xd4, 0x19, 0x9e, 0x21, 0xf9, 0x10, 0xd1, 0x57, 0x1d, 0x11, 0x49, 0x69, 0xce, 0xce, 0xf4, 0x8f, 0x9, 0xf9, 0x34, 0xd4, 0x2c, 0xcb, 0x6a, 0x28, 0x1a, 0x15, 0x86, 0x8f, 0x29, 0x99,
-})
+// var genesisHash = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
+// 	0x58, 0xc2, 0xd4, 0x19, 0x9e, 0x21, 0xf9, 0x10, 0xd1, 0x57, 0x1d, 0x11, 0x49, 0x69, 0xce, 0xce, 0xf4, 0x8f, 0x9, 0xf9, 0x34, 0xd4, 0x2c, 0xcb, 0x6a, 0x28, 0x1a, 0x15, 0x86, 0x8f, 0x29, 0x99,
+// }) // todo: must be uncommented
 
+// this my code
+// ------
+var genesisHash = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
+	// 37, 114, 18, 197, 197, 53, 55, 104, 245, 203, 188, 149, 245, 204, 77, 49, 222, 7, 94, 109, 239, 203, 14, 71, 223, 114, 160, 23, 35, 218, 103, 178,
+	88, 208, 161, 38, 250, 83, 54, 215, 222, 119, 131, 137, 86, 35, 47, 2, 65, 249, 100, 138, 167, 201, 75, 77, 7, 122, 207, 164, 98, 157, 172, 186,
+}) // TODO: added new custom genesis hash
+
+// ------
 // genesisMerkleRoot is the hash of the first transaction in the genesis block
 // for the main network.
 var genesisMerkleRoot = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
@@ -85,7 +94,8 @@ var genesisBlock = externalapi.DomainBlock{
 			0x71, 0x0f, 0x27, 0xdf, 0x42, 0x3e, 0x63, 0xaa, 0x6c, 0xdb, 0x72, 0xb8, 0x9e, 0xa5, 0xa0, 0x6c, 0xff, 0xa3, 0x99, 0xd6, 0x6f, 0x16, 0x77, 0x04, 0x45, 0x5b, 0x5a, 0xf5, 0x9d, 0xef, 0x8e, 0x20,
 		}),
 		1637609671037,
-		486722099,
+		// 486722099, // todo: for calculate difficulty
+		511705087, //525264379,
 		0x3392c,
 		1312860, // Checkpoint DAA score
 		0,

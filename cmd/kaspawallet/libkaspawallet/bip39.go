@@ -76,6 +76,8 @@ func versionFromParams(params *dagconfig.Params) ([4]byte, error) {
 		return bip32.KaspaDevnetPrivate, nil
 	case dagconfig.SimnetParams.Name:
 		return bip32.KaspaSimnetPrivate, nil
+	case dagconfig.CustomnetParams.Name: //TODO: added custom network
+		return bip32.KaspaCustomnetPrivate, nil
 	}
 
 	return [4]byte{}, errors.Errorf("unknown network %s", params.Name)

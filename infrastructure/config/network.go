@@ -58,8 +58,8 @@ type overrideDAGParamsConfig struct {
 func (networkFlags *NetworkFlags) ResolveNetwork(parser *flags.Parser) error {
 	//NetParams holds the selected network parameters. Default value is main-net.
 	networkFlags.ActiveNetParams = &dagconfig.MainnetParams
-	fmt.Println("\n-- MainnetParams \n", &dagconfig.MainnetParams)
-	fmt.Println("\n-- networkFlags \n", networkFlags)
+	fmt.Println("\n[DEBAG] MainnetParams ->\n", &dagconfig.MainnetParams)
+	fmt.Println("\n[DEBAG] networkFlags -> ", networkFlags)
 
 	// Multiple networks can't be selected simultaneously.
 	numNets := 0
@@ -67,7 +67,7 @@ func (networkFlags *NetworkFlags) ResolveNetwork(parser *flags.Parser) error {
 	// Count number of network flags passed; assign active network params
 	// while we're at it
 	if networkFlags.Customnet {
-		println("---- networkFlags.Customnet")
+		println("\n[DEBAG] networkFlags.Customnet")
 		numNets++
 		networkFlags.ActiveNetParams = &dagconfig.CustomnetParams
 	}
@@ -80,7 +80,7 @@ func (networkFlags *NetworkFlags) ResolveNetwork(parser *flags.Parser) error {
 		networkFlags.ActiveNetParams = &dagconfig.SimnetParams
 	}
 	if networkFlags.Devnet {
-		println("--- networkFlags.Devnet")
+		println("\n[DEBAG] networkFlags.Devnet")
 		numNets++
 		networkFlags.ActiveNetParams = &dagconfig.DevnetParams
 	}

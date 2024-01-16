@@ -1,6 +1,7 @@
 package consensus
 
 import (
+	"fmt"
 	"math/big"
 	"sync"
 
@@ -1121,22 +1122,45 @@ func (s *consensus) isNearlySyncedNoLock() (bool, error) {
 	stagingArea := model.NewStagingArea()
 	virtualGHOSTDAGData, err := s.ghostdagDataStores[0].Get(s.databaseContext, stagingArea, model.VirtualBlockHash, false)
 	if err != nil {
+		fmt.Println("\n[DEBAG] STEP 1")
+
 		return false, err
 	}
 
+	// this my code
+	//------
+	syncInfo, _ := s.syncManager.GetSyncInfo(stagingArea)
+
+	fmt.Println("\n[DEBAG] syncInfo.BlockCount ", syncInfo.BlockCount)
+	// if node is running from genesis block return `true` for sync status
+	if syncInfo.BlockCount == 1 {
+		return true, nil
+	}
+	//------
+
 	if virtualGHOSTDAGData.SelectedParent().Equal(s.genesisHash) {
+		fmt.Println("\n[DEBAG] STEP 2")
+
 		return false, nil
 	}
 
 	virtualSelectedParentHeader, err := s.blockHeaderStore.BlockHeader(s.databaseContext, stagingArea, virtualGHOSTDAGData.SelectedParent())
 	if err != nil {
+		fmt.Println("\n[DEBAG] STEP 3")
+
 		return false, err
 	}
 
 	now := mstime.Now().UnixMilliseconds()
 	// As a heuristic, we allow the node to mine if he is likely to be within the current DAA window of fully synced nodes.
 	// Such blocks contribute to security by maintaining the current difficulty despite possibly being slightly out of sync.
-	if now-virtualSelectedParentHeader.TimeInMilliseconds() < s.expectedDAAWindowDurationInMilliseconds {
+	// this my code
+	//------
+	fmt.Println("\n[DEBAG] now-virtualSelectedParentHeader.TimeInMilliseconds() ", now-virtualSelectedParentHeader.TimeInMilliseconds())
+	fmt.Println("\n[DEBAG] s.expectedDAAWindowDurationInMilliseconds ", s.expectedDAAWindowDurationInMilliseconds)
+	//------
+
+	if now-virtualSelectedParentHeader.TimeInMilliseconds() < (s.expectedDAAWindowDurationInMilliseconds * 100) { //TODO `>` -> `<`
 		log.Debugf("The selected tip timestamp is recent (%d), so IsNearlySynced returns true",
 			virtualSelectedParentHeader.TimeInMilliseconds())
 		return true, nil
@@ -1144,5 +1168,7 @@ func (s *consensus) isNearlySyncedNoLock() (bool, error) {
 
 	log.Debugf("The selected tip timestamp is old (%d), so IsNearlySynced returns false",
 		virtualSelectedParentHeader.TimeInMilliseconds())
+	fmt.Println("\n[DEBAG] STEP 4")
+
 	return false, nil
 }
