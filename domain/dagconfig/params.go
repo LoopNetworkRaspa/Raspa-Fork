@@ -208,10 +208,10 @@ func (p *Params) PruningDepth() uint64 {
 
 // custom config
 // ---------------------------------------
-var CustomnetParams = Params{
+var RaspadevnetParams = Params{
 	K:           defaultGHOSTDAGK, // You may want to use the same value or modify it
-	Name:        "kaspa-customnet",
-	Net:         appmessage.Customnet, // customnet -> 0x123456
+	Name:        "raspa-devnet",
+	Net:         appmessage.Raspadev, // raspadev -> 0x123456
 	RPCPort:     "16510",
 	DefaultPort: "16511",
 	DNSSeeds:    []string{}, // Add your custom DNS seeds if available
@@ -245,7 +245,7 @@ var CustomnetParams = Params{
 	AcceptUnroutable: false,
 
 	// Human-readable part for Bech32 encoded addresses
-	Prefix: util.Bech32PrefixKaspaCustom,
+	Prefix: util.Bech32PrefixRaspaDev,
 
 	// Address encoding magics
 	PrivateKeyID: 0x80, // Adjust if needed
@@ -593,5 +593,5 @@ func init() {
 	mustRegister(&TestnetParams)
 	mustRegister(&SimnetParams)
 	mustRegister(&DevnetParams)
-	mustRegister(&CustomnetParams)
+	mustRegister(&RaspadevnetParams)
 }

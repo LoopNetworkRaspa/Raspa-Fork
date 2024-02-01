@@ -332,7 +332,7 @@ func combineNetworkFlags(dst, src *config.NetworkFlags) {
 	dst.Testnet = dst.Testnet || src.Testnet
 	dst.Simnet = dst.Simnet || src.Simnet
 	dst.Devnet = dst.Devnet || src.Devnet
-	dst.Customnet = dst.Customnet || src.Customnet // TODO: added custom network
+	dst.Raspadev = dst.Raspadev || src.Raspadev // TODO: added custom network
 	if dst.OverrideDAGParamsFile == "" {
 		dst.OverrideDAGParamsFile = src.OverrideDAGParamsFile
 	}

@@ -52,7 +52,7 @@ const (
 	Bech32PrefixKaspaSim
 
 	// Prefix for the CUSTOM network.
-	Bech32PrefixKaspaCustom //TODO: added custom network
+	Bech32PrefixRaspaDev //TODO: added custom network
 )
 
 // Map from strings to Bech32 address prefix constants for parsing purposes.
@@ -61,7 +61,7 @@ var stringsToBech32Prefixes = map[string]Bech32Prefix{
 	"kaspadev":    Bech32PrefixKaspaDev,
 	"kaspatest":   Bech32PrefixKaspaTest,
 	"kaspasim":    Bech32PrefixKaspaSim,
-	"kaspacustom": Bech32PrefixKaspaCustom, //TODO: added custom network
+	"raspadev": Bech32PrefixRaspaDev, //TODO: added custom network
 }
 
 // ParsePrefix attempts to parse a Bech32 address prefix.

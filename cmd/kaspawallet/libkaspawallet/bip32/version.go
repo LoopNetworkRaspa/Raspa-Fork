@@ -23,20 +23,20 @@ var BitcoinMainnetPublic = [4]byte{
 }
 
 // TODO: added new keys for custom network
-// KaspaCustomnetPrivate is the version that is used for
-// kaspa customnet bip32 private extended keys.
+// RaspadevnetPrivate is the version that is used for
+// kaspa raspadev bip32 private extended keys.
 // Ecnodes to xprv in base58.
-var KaspaCustomnetPrivate = [4]byte{
+var RaspadevnetPrivate = [4]byte{
 	0x03,
 	0x8f,
 	0x2e,
 	0xf4,
 }
 
-// KaspaCustomnetPublic is the version that is used for
-// kaspa customnet bip32 public extended keys.
+// RaspadevnetPublic is the version that is used for
+// kaspa raspadev bip32 public extended keys.
 // Ecnodes to kpub in base58.
-var KaspaCustomnetPublic = [4]byte{
+var RaspadevnetPublic = [4]byte{
 	0x03,
 	0x8f,
 	0x33,
