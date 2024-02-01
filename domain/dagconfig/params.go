@@ -208,7 +208,7 @@ func (p *Params) PruningDepth() uint64 {
 
 // custom config
 // ---------------------------------------
-var RaspadevnetParams = Params{
+var RaspadevParams = Params{
 	K:           defaultGHOSTDAGK, // You may want to use the same value or modify it
 	Name:        "raspa-devnet",
 	Net:         appmessage.Raspadev, // raspadev -> 0x123456
@@ -593,5 +593,5 @@ func init() {
 	mustRegister(&TestnetParams)
 	mustRegister(&SimnetParams)
 	mustRegister(&DevnetParams)
-	mustRegister(&RaspadevnetParams)
+	mustRegister(&RaspadevParams)
 }

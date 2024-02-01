@@ -20,7 +20,7 @@ type NetworkFlags struct {
 	Testnet               bool   `long:"testnet" description:"Use the test network"`
 	Simnet                bool   `long:"simnet" description:"Use the simulation test network"`
 	Devnet                bool   `long:"devnet" description:"Use the development test network"`
-	Raspadev             bool   `long:"raspadevnet" description:"Use the raspadev network"`
+	Raspadev             bool   `long:"raspadev" description:"Use the raspadev network"`
 	OverrideDAGParamsFile string `long:"override-dag-params-file" description:"Overrides DAG params (allowed only on devnet)"`
 
 	ActiveNetParams *dagconfig.Params
@@ -69,7 +69,7 @@ func (networkFlags *NetworkFlags) ResolveNetwork(parser *flags.Parser) error {
 	if networkFlags.Raspadev {
 		println("\n[DEBAG] networkFlags.Raspadev")
 		numNets++
-		networkFlags.ActiveNetParams = &dagconfig.RaspadevnetParams
+		networkFlags.ActiveNetParams = &dagconfig.RaspadevParams
 	}
 	if networkFlags.Testnet {
 		numNets++
