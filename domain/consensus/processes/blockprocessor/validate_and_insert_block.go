@@ -4,6 +4,7 @@ import (
 	// we need to embed the utxoset of mainnet genesis here
 	_ "embed"
 	"fmt"
+
 	"github.com/kaspanet/kaspad/domain/consensus/model"
 	"github.com/kaspanet/kaspad/domain/consensus/model/externalapi"
 	"github.com/kaspanet/kaspad/domain/consensus/ruleerrors"
@@ -300,6 +301,7 @@ func (bp *blockProcessor) checkBlockStatus(stagingArea *model.StagingArea, block
 
 func (bp *blockProcessor) validatePreProofOfWork(stagingArea *model.StagingArea, block *externalapi.DomainBlock) error {
 	blockHash := consensushashing.BlockHash(block)
+	log.Error("[DEBUG] blockHash: %s", blockHash.ByteArray())
 
 	hasValidatedHeader, err := bp.hasValidatedHeader(stagingArea, blockHash)
 	if err != nil {

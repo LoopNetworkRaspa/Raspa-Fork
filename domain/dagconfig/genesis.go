@@ -70,10 +70,15 @@ var genesisCoinbaseTx = transactionhelper.NewSubnetworkTransaction(0, []*externa
 
 // this my code
 // ------
+// var genesisHash = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
+// 	// 37, 114, 18, 197, 197, 53, 55, 104, 245, 203, 188, 149, 245, 204, 77, 49, 222, 7, 94, 109, 239, 203, 14, 71, 223, 114, 160, 23, 35, 218, 103, 178,
+// 	88, 208, 161, 38, 250, 83, 54, 215, 222, 119, 131, 137, 86, 35, 47, 2, 65, 249, 100, 138, 167, 201, 75, 77, 7, 122, 207, 164, 98, 157, 172, 186,
+// }) // TODO: prevues custom genesis hash
+
 var genesisHash = externalapi.NewDomainHashFromByteArray(&[externalapi.DomainHashSize]byte{
 	// 37, 114, 18, 197, 197, 53, 55, 104, 245, 203, 188, 149, 245, 204, 77, 49, 222, 7, 94, 109, 239, 203, 14, 71, 223, 114, 160, 23, 35, 218, 103, 178,
-	88, 208, 161, 38, 250, 83, 54, 215, 222, 119, 131, 137, 86, 35, 47, 2, 65, 249, 100, 138, 167, 201, 75, 77, 7, 122, 207, 164, 98, 157, 172, 186,
-}) // TODO: added new custom genesis hash
+	177, 231, 176, 226, 157, 40, 203, 30, 250, 68, 126, 51, 165, 58, 232, 161, 184, 131, 16, 120, 144, 119, 115, 103, 155, 226, 169, 75, 120, 137, 241, 180,
+}) // TODO: current custom genesis hash
 
 // ------
 // genesisMerkleRoot is the hash of the first transaction in the genesis block
@@ -94,8 +99,8 @@ var genesisBlock = externalapi.DomainBlock{
 			0x71, 0x0f, 0x27, 0xdf, 0x42, 0x3e, 0x63, 0xaa, 0x6c, 0xdb, 0x72, 0xb8, 0x9e, 0xa5, 0xa0, 0x6c, 0xff, 0xa3, 0x99, 0xd6, 0x6f, 0x16, 0x77, 0x04, 0x45, 0x5b, 0x5a, 0xf5, 0x9d, 0xef, 0x8e, 0x20,
 		}),
 		1637609671037,
-		// 486722099, // todo: for calculate difficulty
-		511705087, //525264379,
+		// 486722099,
+		501705087, // 511705087 - prevues difficulty , // 511705087 - testnet; 486722099 - mainnet; 525264379 - devnet; 545259519 - simnet; // todo: for calculate difficulty (custom difficulty )
 		0x3392c,
 		1312860, // Checkpoint DAA score
 		0,
